@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/index.css}"/>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/buttons.css}"/>
+</head>
+<body>
+	<div style="text-align: center;margin: 10% auto 0 auto;">
+		<label style="font-size: 50px">基于SSM的房屋租赁系统</label>
+	</div>
+	<div>
+		<table style="margin: 10% auto 0 auto;">
+			<tbody>
+				<tr>
+					<td>
+						<select name="city" class="city search only_bottom_show">
+							<option value="hrb">哈尔滨</option>
+							<option value="bj">北京</option>
+						</select>
+					</td>
+					<td>
+						<select name="RentalWay" class="search only_bottom_show">
+							<option value="SoleTenant">整租</option>
+							<option value="CoTenant">合租</option>
+						</select>
+					</td>
+					<td><input type="text" id="search" name="search" class="search only_bottom_show" placeholder="输入想住的区域" /></td>
+					<td><button type="submit" class="search button black" style="font-size:20px" onclick="search()">搜索</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<script type="text/javascript" th:inline="javascript">
+var url = [[@{/gotoIndex}]];
+</script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-3.3.1.js}"></script>
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+</html>
