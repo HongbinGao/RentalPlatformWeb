@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>注册</title>
 </head>
 <body>
-	<form action="/logon" method="post">
+	<form>
 		<table>
 			<tbody>
 				<tr>
@@ -21,17 +21,19 @@
 					<td><input type="password" name="confirmpass"></td>
 				</tr>
 				<tr>
-					<td><label>邮箱：</label></td>
+					<td><label>手机号：</label></td>
 					<td><input type="text" name="phone"></td>
 				</tr>
 			</tbody>
 			<tfoot>
 				<tr>
-					<td><button type="submit">提交</button></td>
+					<td><button type="button" onclick="check()">提交</button></td>
 					<td><button type="reset">重置</button></td>
 				</tr>
 			</tfoot>
 		</table>
 	</form>
 </body>
+<script type="text/javascript" src="../../js/jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../js/signin.js"></script>
 </html>
